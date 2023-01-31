@@ -13,6 +13,18 @@ body{
     display: flex;
     align-items: center;
     justify-items: center;
+
+}
+#main{
+    width: 500px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    user-select: none;
+
 }
 .pixel{
     border: black solid 0.1px;
@@ -25,14 +37,26 @@ body{
     background-color: #666;
     transition: background-color 0.01s;
 }
-
-
+.pixel.activePixel{
+    background-color: #000;
+    transition: background-color 3s;
+}
+.pixel.activePixel:hover{
+    background-color: #999;
+    transition: background-color 0.01s;
+}
 #sketchGrid{
     border: black solid 0.1px;
-    width: 300px;
-    height: 300px;
-    margin: auto;
+    width: 500px;
+    height: 500px;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
+}
+#sizeRange{
+    display:block;
+    width:100%;
+}
+button{
+    padding: 5px;
 }
