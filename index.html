@@ -9,9 +9,15 @@
     <script src="script.js" type="application/javascript" defer></script>
 </head>
 <body>
+   
     <div id="main">
+        <div id="menu">
+            <label>Grid Size : <span id="gridSize"></span></label>
+            <input type="range" min="1" max="100" value="16" id="sizeRange" oninput="gridChange()">
+            <button id="randomNes" onclick="randomNess()">randomNes</button>
+            <button id="Clear" onclick="drawGrid()">clear</button>
+        </div>
         <div id="sketchGrid"></div>
-        <input type="range" min="1" max="100" value="16" id="sizeRange" oninput="gridChange()">
     </div>
 </body>
 </html>

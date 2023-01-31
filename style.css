@@ -15,12 +15,14 @@ body{
     justify-items: center;
 
 }
+#menu{
+    padding: 20px;
+}
 #main{
-    width: 500px;
+    width: 700px;
     height: 600px;
     margin: auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-items: center;
     user-select: none;
@@ -29,20 +31,13 @@ body{
 .pixel{
     border: black solid 0.1px;
     display: inline-block;
+    background-color: #FFF;
     width: 100%;
     height: 100%;
     transition: background-color 3s;
 }
 .pixel:hover{
     background-color: #666;
-    transition: background-color 0.01s;
-}
-.pixel.activePixel{
-    background-color: #000;
-    transition: background-color 3s;
-}
-.pixel.activePixel:hover{
-    background-color: #999;
     transition: background-color 0.01s;
 }
 #sketchGrid{
@@ -56,7 +51,29 @@ body{
 #sizeRange{
     display:block;
     width:100%;
+    margin-bottom: 20px;
 }
 button{
     padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+button.active{
+    /*https://stackoverflow.com/questions/56418763/creating-the-perfect-rainbow-gradient-in-css*/
+    background: linear-gradient(
+        125deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgba(186, 12, 248, 1) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%
+    );
+
 }
